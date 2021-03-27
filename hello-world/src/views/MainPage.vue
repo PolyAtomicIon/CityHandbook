@@ -1,11 +1,9 @@
-<template>
-    
-    <div class="wrapper">
-   
-        <main-page-header />
+<template> 
+  <div class="wrapper">
+  
+    <main-page-header />
 
-    </div>
-
+  </div>
 </template>
 
 <script>
@@ -20,8 +18,8 @@ export default {
 
 <style scoped>
 
-    .wrapper {
-        /* background: blue; */
-    }
+  .wrapper {
+      /* background: blue; */
+  }
 
 </style>
