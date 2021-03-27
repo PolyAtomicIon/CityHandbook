@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <main-page-header />
+    <Section-header />
   </div>
 </template>
 
 <script>
-import MainPageHeader from './components/MainPageHeader.vue'
+import SectionHeader from './components/SectionHeader.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    MainPageHeader
+    SectionHeader
   }
 }
 </script>
