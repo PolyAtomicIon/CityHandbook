@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <Section-header />
+    <router-view></router-view> 
   </div>
 </template>
 
 <script>
-import SectionHeader from './components/SectionHeader.vue'
 
 export default {
-  name: 'app',
-  components: {
-    SectionHeader
-  }
+  name: 'App',
 }
+
 </script>
 
 <style>
