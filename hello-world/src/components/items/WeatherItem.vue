@@ -4,7 +4,7 @@
 
         <circle-item />
         <span>
-            + 7 / +8 C
+            {{Weather}}
         </span>
 
     </div>
@@ -12,13 +12,15 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import CircleItem from './CircleItem.vue'
+import {mapGetters} from 'vuex';
 
 export default {
   components: {
-    // HelloWorld,
     CircleItem
+  },
+  computed: {
+      ...mapGetters(['Weather']),
   }
 }
 </script>
