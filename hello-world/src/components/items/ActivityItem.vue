@@ -8,8 +8,6 @@
 import CircleItem from './CircleItem.vue'
 import ActivityTextBlock from './ActivityTextBlock.vue'
 
-
-
 export default {
   
   components: {
