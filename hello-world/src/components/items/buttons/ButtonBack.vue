@@ -1,6 +1,6 @@
 <template>
 
-    <div class="back-btn">
+    <div class="back-btn" @click="$router.go(-1)">
         <button><font-awesome-icon class="arrow-left" icon="long-arrow-alt-left" /></button>
     </div>
 

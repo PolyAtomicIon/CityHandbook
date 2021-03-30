@@ -1,5 +1,6 @@
-import NotFound from '../views/NotFound';
+import NotFound from '../views/NotFound'
 import MainPage from '../views/MainPage'
+import SectionInfo from '../views/SectionInfo'
 
 export default [{
         path: '*',
@@ -13,4 +14,12 @@ export default [{
             title: "Main Page"
         }
     },
+    {
+        name: 'sections',
+        path: '/sections',
+        component: SectionInfo,
+        meta: {
+            title: "Section Info"
+        }
+    }
 ]

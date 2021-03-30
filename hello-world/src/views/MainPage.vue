@@ -2,37 +2,25 @@
 
   <div class="wrapper">
 
-    <section-header />
+    <main-page-header />
 
-    <sections-list />
-
-    <div class="item"><sections-list itemName="Basketball" /></div>
-    <div class="item"><sections-list itemName="Voleyball" /></div>
-    <div class="item"><sections-list itemName="Tennis" /></div>
-    <div class="item"><sections-list itemName="Swimming" /></div>
+    <activities-list />
     
   </div>
 
 </template>
 
 <script>
-import SectionHeader from '../components/headers/SectionHeader.vue'
-import SectionsList from '../components/items/SectionsList.vue'
+import ActivitiesList from '../components/ActivitiesList.vue'
+import MainPageHeader from '../components/headers/MainPageHeader.vue'
 
 export default {
   components: {
-    SectionHeader,
-    SectionsList
+    MainPageHeader,
+    ActivitiesList
   }
 }
 </script>
 
 <style scoped>
-  .wrapper {
-    background:#C0C0C0;
-  }
-  
-  .item {
-    margin-top: 25px;
-  }
 </style>

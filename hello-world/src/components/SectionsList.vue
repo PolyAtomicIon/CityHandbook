@@ -25,10 +25,10 @@
 </template>
 
 <script>
-import HighlighterVertical from './highlighters/HighlighterVertical.vue'
-import SocialButtonTwoGis from './social-buttons/SocialButtonTwoGis.vue'
-import SocialButtonInstagram from './social-buttons/SocialButtonInstagram.vue'
-import ButtonMoreInfo from './buttons/ButtonMoreInfo.vue'
+import HighlighterVertical from './items/highlighters/HighlighterVertical.vue'
+import SocialButtonTwoGis from './items/social-buttons/SocialButtonTwoGis.vue'
+import SocialButtonInstagram from './items/social-buttons/SocialButtonInstagram.vue'
+import ButtonMoreInfo from './items/buttons/ButtonMoreInfo.vue'
 
 export default {
     components: {
