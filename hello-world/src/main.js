@@ -6,9 +6,9 @@ import store from './store'
 import './assets/css/main.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons'
+import { faLongArrowAltLeft, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faLongArrowAltLeft)
+library.add(faLongArrowAltLeft, faLongArrowAltRight)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
