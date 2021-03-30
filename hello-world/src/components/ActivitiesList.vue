@@ -3,7 +3,7 @@
     <div class="activities">
         <p class="text">Activities</p>
         <div class="activity_type">
-            <span class="act-item"><activity-item/></span>
+            <span class="act-item"><activity-item colorStyle="first-color" blockName="Chai"/></span>
             <span class="act-item"><activity-item/></span>
             <span class="act-item"><activity-item/></span>
             <span class="act-item"><activity-item/></span>
