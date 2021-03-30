@@ -33,18 +33,11 @@ export default {
 </script>
 
 <style scoped>
-
-    .wrapper {
-        /* background: blue; */
-    }
-
     .text-blocks{
-        /* background: red; */
         padding: 5px;
         margin: 10px 0px;
         display: flex;
         justify-content: space-between  ;
         align-items: center;
     }
-
 </style>

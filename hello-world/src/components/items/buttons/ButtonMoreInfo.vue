@@ -7,12 +7,13 @@
 </template>
 
 <script>
+
 export default ({
     methods: {
-    showDetails() {
-      this.$router.push('detailed')
+        showDetails() {
+            this.$router.push('detailed')
+        }
     }
-  }
 })
 </script>
 

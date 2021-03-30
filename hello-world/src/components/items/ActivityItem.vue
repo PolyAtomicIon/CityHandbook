@@ -3,11 +3,17 @@
     <div class="activity" @click="navigateToSection">
 
        <circle-item/>
+<<<<<<< HEAD
        
        <div class="text-block">
         <span class="text-block-name green"> {{blockName}} </span>
       </div>
 
+=======
+       <div class="text-block">
+        <span class="text-block-name green"> {{blockName}} </span>
+       </div>
+>>>>>>> main
     </div>
     
 </template>
