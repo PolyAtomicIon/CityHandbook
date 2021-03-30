@@ -3,15 +3,16 @@
     <div class="activities">
         <p class="text">Activities</p>
         <div class="activity_type">
-            <span class="act-item"><activity-item colorStyle="first-color" blockName="Chai"/></span>
-            <span class="act-item"><activity-item/></span>
-            <span class="act-item"><activity-item/></span>
-            <span class="act-item"><activity-item/></span>
-            <span class="act-item"><activity-item/></span>
-            <span class="act-item"><activity-item/></span>
-            <span class="act-item"><activity-item/></span>
-            <span class="act-item"><activity-item/></span>
-            <span class="act-item"><activity-item/></span>
+            <span
+                v-for="section in Sections" 
+                :key="section.index"  
+                class="act-item"
+            >
+                <activity-item 
+                    :colorStyle="Colors[section.index]"
+                    :blockName="section.activityName"
+                />
+            </span>
         </div>
     </div>
 
@@ -19,11 +20,25 @@
 
 
 <script>
+
 import ActivityItem from './items/ActivityItem.vue'
+import {mapGetters, mapActions} from 'vuex'
+
 
 export default {
+
+  created() {
+    this.fetchSections();
+  },
+
   components: {
     ActivityItem
+  },
+  computed: {
+    ...mapGetters(['Colors', 'Sections']),
+  },
+  methods: {
+    ...mapActions(['fetchSections']),
   }
 }
 </script>

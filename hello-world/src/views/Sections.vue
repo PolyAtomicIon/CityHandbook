@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <section-header />
+    <section-header :colorStyle="colorStyle"/>
 
     <sections-list />
 
@@ -20,11 +20,16 @@ import SectionHeader from '../components/headers/SectionHeader.vue'
 import SectionsList from '../components/items/SectionsList.vue'
 
 export default {
-  mounted(){
-
-    console.log( this.$route.query.id );
+  data() {
+    return {
+      colorStyle: '',
+    } 
   },
-
+  mounted(){
+    console.log(this.$route.query.colorStyle);
+    this.colorStyle = this.$route.query.colorStyle;
+  },
+  
   components: {
     SectionHeader,
     SectionsList

@@ -20,10 +20,16 @@ import SectionHeader from '../components/headers/SectionHeader.vue'
 import SectionsList from '../components/SectionsList.vue'
 
 export default {
+  data() {
+    return {
+      colorStyle: '',
+    } 
+  },
+  
   components: {
     SectionHeader,
     SectionsList
-  }
+  },
 }
 </script>
 
