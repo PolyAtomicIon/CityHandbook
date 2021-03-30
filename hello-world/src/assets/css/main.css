@@ -1,1 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
+.first-color {
+    background-color: indigo;
+}
+
+.yellow {
+    background-color: pink;
+}
