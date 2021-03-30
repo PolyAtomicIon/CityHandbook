@@ -1,22 +1,26 @@
 <template> 
 
   <div class="wrapper">
-    <detailed-page/>
+
+    <main-page-header />
+
+    <activities-list />
+    
   </div>
 
 </template>
 
 <script>
-import DetailedPage from './DetailedPage.vue'
-
+import ActivitiesList from '../components/ActivitiesList.vue'
+import MainPageHeader from '../components/headers/MainPageHeader.vue'
 
 export default {
   components: {
-    DetailedPage
+    MainPageHeader,
+    ActivitiesList
   }
 }
 </script>
 
 <style scoped>
-  
 </style>
