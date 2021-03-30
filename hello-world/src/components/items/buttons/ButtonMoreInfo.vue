@@ -1,10 +1,22 @@
 <template>
 
-    <div class="more-info-btn">
+    <div class="more-info-btn" @click="showDetails">
         <button><font-awesome-icon class="arrow-right" icon="long-arrow-alt-right" /></button>
     </div>
 
 </template>
+
+<script>
+
+export default ({
+    methods: {
+        showDetails() {
+            this.$router.push('detailed')
+        }
+    }
+})
+</script>
+
 
 <style scoped>
     button {

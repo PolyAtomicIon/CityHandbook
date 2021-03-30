@@ -2,12 +2,15 @@
 
     <div class="activity" @click="navigateToSection">
        <circle-item/>
-       <activity-text-block/>
+       <div class="text-block">
+        <span class="text-block-name green"> {{blockName}} </span>
+       </div>
     </div>
     
 </template>
 
 <script>
+import CircleItem from './CircleItem.vue'
 
 export default {
 
@@ -22,7 +25,7 @@ export default {
   
   components: {
     CircleItem,
-    ActivityTextBlock
+    
   },
   methods: {
     navigateToSection(){
