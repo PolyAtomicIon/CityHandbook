@@ -21,8 +21,8 @@
 
 
 <script>
-import WeatherItem from './items/WeatherItem.vue'
-import TextBlockItem from './items/TextBlockItem.vue'
+import WeatherItem from '../items/WeatherItem.vue'
+import TextBlockItem from '../items/TextBlockItem.vue'
 
 export default {
   components: {
