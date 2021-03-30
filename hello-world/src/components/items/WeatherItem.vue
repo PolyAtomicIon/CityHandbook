@@ -13,14 +13,34 @@
 
 <script>
 import CircleItem from './CircleItem.vue'
-import {mapGetters} from 'vuex';
+// import {mapGetters} from 'vuex';
+import axios from "axios";
 
 export default {
+  data() {
+    return{
+        Weather: '',
+    } 
+  },
+  created(){
+      this.fetchWeather();
+  },
   components: {
     CircleItem
   },
   computed: {
-      ...mapGetters(['Weather']),
+  },
+  methods: {
+      fetchWeather() {
+          axios.get("https://next.json-generator.com/api/json/get/4yyncTsN5")
+            .then(
+                response => {
+                    console.log(response.data);
+                    this.Weather = response.data[0]["weather"];
+                }
+            );
+      }
+      
   }
 }
 </script>

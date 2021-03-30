@@ -8,6 +8,6 @@
     .horizontal-line {
         margin: -8px -8px 0 -8px;
         height: 10px;
-        background: gold;
+        /* background: gold; */
     }
 </style>

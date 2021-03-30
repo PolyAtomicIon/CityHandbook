@@ -2,7 +2,9 @@
     
     <div class="section-item">
         
-        <highlighter-vertical />
+        <highlighter-vertical 
+          :style="'background-color: ' + currentColor"
+        />
 
         <div class="item-info">
             <div class="item-name"> {{ itemName }} </div>
@@ -29,6 +31,7 @@ import HighlighterVertical from './items/highlighters/HighlighterVertical.vue'
 import SocialButtonTwoGis from './items/social-buttons/SocialButtonTwoGis.vue'
 import SocialButtonInstagram from './items/social-buttons/SocialButtonInstagram.vue'
 import ButtonMoreInfo from './items/buttons/ButtonMoreInfo.vue'
+import { mapGetters } from 'vuex'
 
 export default {
     components: {
@@ -44,6 +47,9 @@ export default {
         itemDesc: {
             default: 'lorem ipsum dolor sit amet consectetur adipisicing elit.'
         }
+    },
+    computed: {
+        ...mapGetters(['currentColor']),
     }
 }
 </script>

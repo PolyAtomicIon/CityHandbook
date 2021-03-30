@@ -5,11 +5,11 @@
         <div class="text-blocks">
             <text-block-item 
                 blockName="Date"  
-                blockValue="10.20.2021"  
+                :blockValue="DateValue"  
             />
             <text-block-item 
                 blockName="City"  
-                blockValue="Almaty"  
+                :blockValue="City"  
             />
         </div>
 
@@ -25,11 +25,23 @@ import WeatherItem from '../items/WeatherItem.vue'
 import TextBlockItem from '../items/TextBlockItem.vue'
 
 export default {
-  components: {
-    TextBlockItem,
-    WeatherItem
-  }
+  data() {
+    return{
+        City: '',
+        DateValue: '',
+    } 
+  },
+    components: {
+        TextBlockItem,
+        WeatherItem
+    },
+    methods: {
+        //  fetch Date
+        //  fetch City
+    }
 }
+
+
 </script>
 
 <style scoped>

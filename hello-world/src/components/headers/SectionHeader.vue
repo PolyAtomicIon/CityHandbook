@@ -2,7 +2,8 @@
     
     <div class="section-header">
 
-        <highlighter-horizontal/>
+        <highlighter-horizontal 
+        />
 
         <div class="header-bg">
             
@@ -36,7 +37,9 @@ export default {
     props: {
         headerName: {
             default: 'Sport'
-        }
+        },
+    },
+    computed: {
     }
 }
 </script>
