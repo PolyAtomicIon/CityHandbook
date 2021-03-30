@@ -1,18 +1,29 @@
 <template>
     <div class="activity">
-       <circle-item/>
-       <activity-text-block/>
+
+      <div class="circle" :class="colorStyle">
+      </div>
+
+       <div class="text-block">
+          <span class="text-block-name green"> {{blockName}} </span>
+       </div>
     </div>
 </template>
 <script>
-import CircleItem from './CircleItem.vue'
-import ActivityTextBlock from './ActivityTextBlock.vue'
 
 export default {
+
+  props: {
+      blockName: {
+        default: 'Sport'
+      },
+      colorStyle: {
+        default: 'yellow'
+      }
+    },
   
   components: {
-    CircleItem,
-    ActivityTextBlock
+    
   }
   
 }
@@ -23,9 +34,24 @@ export default {
         height: 110px;
         /* background-color: aqua; */
     }
-    /deep/ .circle {
-        background: #FFE352;
+    .circle {
+        border-radius: 50%;
         height: 70px;
         width: 70px;
+    }
+    .text-block {
+        /* background: green; */
+        font-family: 'Oleo Script', cursive;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 24px;
+        text-align: center;
+        padding-left: 8px;
+    }
+
+    .text-block .text-block-name {
+        font-weight: bold;
+        
     }
 </style>
