@@ -1,6 +1,6 @@
 <template>
 
-    <div class="more-info-btn" @click="showDetails">
+    <div class="more-info-btn" @click="$emit('click'); showDetails()">
         <button><font-awesome-icon class="arrow-right" icon="long-arrow-alt-right" /></button>
     </div>
 
@@ -9,9 +9,10 @@
 <script>
 
 export default ({
+    
     methods: {
         showDetails() {
-            this.$router.push('detailed')
+            
         }
     }
 })

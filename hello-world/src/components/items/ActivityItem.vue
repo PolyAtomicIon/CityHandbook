@@ -39,6 +39,9 @@ export default {
     navigateToSection(){
       this.$router.push({ 
           name: 'sections', 
+          query: { 
+              headername: this.blockName
+          },
       });
       this.setCurrentColor(this.colorStyle);
     }

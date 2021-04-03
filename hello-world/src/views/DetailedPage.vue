@@ -1,12 +1,12 @@
 <template>
     <div class="info">
         <section-header
-          headerName="Football"
+          :headerName="$route.query.sectionName"
         />
         <div class="body">
           <detailed-page-buttons/>
           <picture-item/> 
-          <definition-item/>
+          <definition-item :definition="$route.query.sectionDesc"/>
         </div>
         
     </div>
