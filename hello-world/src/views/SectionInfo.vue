@@ -49,7 +49,6 @@ export default {
                     this.sectionList=response.data;
                     });
         }
-       
     }
 
 
