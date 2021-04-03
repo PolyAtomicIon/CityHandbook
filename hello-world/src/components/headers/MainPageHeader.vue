@@ -23,6 +23,7 @@
 <script>
 import WeatherItem from '../items/WeatherItem.vue'
 import TextBlockItem from '../items/TextBlockItem.vue'
+import axios from 'axios'
 
 export default {
   data() {
@@ -35,8 +36,17 @@ export default {
         TextBlockItem,
         WeatherItem
     },
+    created(){
+        this.fetchDateAndCity();
+    },
     methods: {
-        //  fetch Date
+        fetchDateAndCity(){
+            axios.get("https://next.json-generator.com/api/json/get/4kyQZCiNc")
+                .then(response => {
+                    console.log(response.data); 
+                    this.DateValue = response.data[0].date, this.City = response.data[0 ].city
+                    });
+        }
         //  fetch City
     }
 }
