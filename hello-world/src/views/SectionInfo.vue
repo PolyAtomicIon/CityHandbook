@@ -3,13 +3,18 @@
   <div class="wrapper">
 
     <section-header />
-
-    <sections-list />
-
-    <div class="item"><sections-list itemName="Basketball" /></div>
-    <div class="item"><sections-list itemName="Voleyball" /></div>
-    <div class="item"><sections-list itemName="Tennis" /></div>
-    <div class="item"><sections-list itemName="Swimming" /></div>
+   
+    
+    <div class="cont">
+      <div 
+      v-for="sectionValue in sectionList"
+      :key="sectionValue.section_name"
+      class="item"
+      >
+        <sections-list :itemName="sectionValue.section_name" :itemDesc="sectionValue.section_info"/>
+      </div>
+    </div>
+    
     
   </div>
 
@@ -18,11 +23,13 @@
 <script>
 import SectionHeader from '../components/headers/SectionHeader.vue'
 import SectionsList from '../components/SectionsList.vue'
+import axios from 'axios'
 
 export default {
   data() {
     return {
       colorStyle: '',
+      sectionList: null
     } 
   },
   
@@ -30,6 +37,22 @@ export default {
     SectionHeader,
     SectionsList
   },
+  created(){
+        this.fetchSectionList();
+    },
+
+  methods: {
+        fetchSectionList(){
+            axios.get("https://next.json-generator.com/api/json/get/EJ4nmAjNc")
+                .then(response => {
+                    console.log(response.data); 
+                    this.sectionList=response.data;
+                    });
+        }
+       
+    }
+
+
 }
 </script>
 
@@ -38,7 +61,10 @@ export default {
     background:#C0C0C0;
   }
   
-  .item {
+  .cont .item:first-child{
+    margin-top: 0px;
+  }
+  .cont .item {
     margin-top: 25px;
   }
 </style>
