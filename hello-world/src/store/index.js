@@ -32,6 +32,7 @@ const mainPageModule = {
                     }
                 );
         },
+        
     },
     getters: {
         Sections(state) {
