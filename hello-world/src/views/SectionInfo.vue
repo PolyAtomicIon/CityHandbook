@@ -2,9 +2,10 @@
 
   <div class="wrapper">
 
-    <section-header />
+    <section-header 
+      :headerName="headerName"
+    />
    
-    
     <div class="cont">
       <div 
       v-for="sectionValue in sectionList"
@@ -29,7 +30,8 @@ export default {
   data() {
     return {
       colorStyle: '',
-      sectionList: null
+      sectionList: null,
+      headername: ''
     } 
   },
   
@@ -39,6 +41,7 @@ export default {
   },
   created(){
         this.fetchSectionList();
+        this.headerName = this.$route.query.headername;
     },
 
   methods: {

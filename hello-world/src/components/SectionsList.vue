@@ -8,7 +8,7 @@
 
         <div class="item-info">
             <div class="item-name"> {{ itemName }} </div>
-            <div class="item-desc"> {{ itemDesc }} </div>
+            <div class="item-desc"> {{ Description }} </div>
         </div>
 
         <div class="buttons-pos">
@@ -17,7 +17,7 @@
             
             <div class="sec-btn-pos">
                 <social-button-instagram />
-                <button-more-info />
+                <button-more-info @click="showDetails" />
             </div>
 
         </div>
@@ -50,6 +50,25 @@ export default {
     },
     computed: {
         ...mapGetters(['currentColor']),
+
+        Description(){
+            if( this.itemDesc.length > 128 ){
+                return 'description: ...';
+            }
+            return this.itemDesc;
+        }
+    },
+    methods: {
+        showDetails() {
+
+            this.$router.push({
+                name:'detailed',
+                query: { 
+                    sectionName: this.itemName,
+                    sectionDesc: this.itemDesc
+                },
+            })
+        }
     }
 }
 </script>

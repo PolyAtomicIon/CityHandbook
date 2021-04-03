@@ -41,11 +41,14 @@ export default {
     },
     methods: {
         fetchDateAndCity(){
+            var current_date=new Date();
             axios.get("https://next.json-generator.com/api/json/get/4kyQZCiNc")
                 .then(response => {
                     console.log(response.data); 
-                    this.DateValue = response.data[0].date, this.City = response.data[0 ].city
+                    current_date =new Date(response.data[0].date), this.City = response.data[0 ].city
+                    this.DateValue=current_date.getDate()+"."+current_date.getMonth()+"."+current_date.getFullYear();
                     });
+            
         }
     }
 }
