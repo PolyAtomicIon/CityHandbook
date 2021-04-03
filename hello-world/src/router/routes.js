@@ -28,7 +28,7 @@ export default [{
         path: '/detailed',
         component: DetailedPage,
         meta: {
-            title: "Detailed Info"
+            title: "Detailed Page"
         }
     }
 ]

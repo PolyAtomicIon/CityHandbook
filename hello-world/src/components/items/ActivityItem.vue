@@ -21,6 +21,7 @@ import CircleItem from './CircleItem.vue'
 export default {
 
   props: {
+    
       blockName: {
         default: 'Sport'
       },
@@ -30,8 +31,7 @@ export default {
     },
   
   components: {
-    CircleItem,
-    
+    CircleItem
   },
   methods: {
     ...mapMutations(['setCurrentColor']),
