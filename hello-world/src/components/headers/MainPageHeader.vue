@@ -47,7 +47,6 @@ export default {
                     this.DateValue = response.data[0].date, this.City = response.data[0 ].city
                     });
         }
-        //  fetch City
     }
 }
 

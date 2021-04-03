@@ -2,7 +2,8 @@
     
     <div class="section-header">
 
-        <highlighter-horizontal 
+        <highlighter-horizontal
+        :style="'background-color: ' + currentColor"
         />
 
         <div class="header-bg">
@@ -24,6 +25,7 @@
 <script>
 import HighlighterHorizontal from '../items/highlighters/HighlighterHorizontal.vue'
 import ButtonBack from '../items/buttons/ButtonBack.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   data: function () {
@@ -40,6 +42,7 @@ export default {
         },
     },
     computed: {
+        ...mapGetters(['currentColor']),
     }
 }
 </script>
