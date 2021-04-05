@@ -8,6 +8,9 @@ import './assets/css/main.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faLongArrowAltLeft, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import TextHighlight from 'vue-text-highlight';
+
+Vue.component('text-highlight', TextHighlight);
 library.add(faLongArrowAltLeft, faLongArrowAltRight)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
